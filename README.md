@@ -4,12 +4,19 @@ You need to have a root shell on machine to try the following codes.
 
 
 ```sh
-which chattr ls echo printf chmod ps systemctl base64 cat | while read line; do echo -n "$line  "; stat -c "%a" $line; done
+which chattr ls nc curl wget scp cp mv echo printf chmod ps systemctl base64 cat | while read line; do echo -n "$line  "; stat -c "%a" $line; done
 ```  
+(Feel free to add more binaries to it, I think I've missed a lot.)
 Expected Output:  
 ```log
 /usr/bin/chattr  755
 /usr/bin/ls  755
+/usr/bin/nc  777
+/usr/bin/curl  755
+/usr/bin/wget  755
+/usr/bin/scp  755
+/usr/bin/cp  755
+/usr/bin/mv  755
 /usr/bin/echo  755
 /usr/bin/printf  755
 /usr/bin/chmod  755
